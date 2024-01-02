@@ -1,52 +1,58 @@
 import React, { useState } from "react";
 import './login.css';
-import user_icon from './assets/person.png';
-import email_icon from './assets/email.png';
-import password_icon from './assets/password.png';
-import Forgot from "./forgetpassword";
+import { Link } from "react-router-dom";
+import Navbar from "./navbar";
+import user_icon from './Assets/person.png';
+import email_icon from './Assets/email.png';
+import password_icon from './Assets/password.png';
+import Footer from "./Footer";
 
 const Login = () => {
   const [action, setAction] = useState("Login");
 
   return (
-    <div className="container">
-      <div className="header">
-        <div className="text">{action}</div>
-        <div className="underline"></div>
+    <div>
+    <Navbar/>
+    <div className="Logincontainer">
+      <div className="Loginheader">
+        <div className="Logintext">{action}</div>
+        <div className="Loginunderline"></div>
       </div>
-      <div className="inputs">
+      <div className="Logininputs">
         {action === "LogIn" ? (
           <div></div>
         ) : (
-          <div className="input">
-            <img src={user_icon} alt="" />
+          <div className="Logininput">
+          <img src={user_icon} alt="" />
             <input type="text" placeholder="Enter Your Name" required />
           </div>
         )}
-        <div className="input">
-          <img src={email_icon} alt="" />
+        <div className="Logininput">
+        <img src={email_icon} alt="" />
           <input type="email" placeholder="Enter Your Email" required />
         </div>
-        <div className="input">
-          <img src={password_icon} alt="" />
+        <div className="Logininput">
+        <img src={password_icon} alt="" />
           <input type="password" placeholder="Enter your Password" required />
         </div>
       </div>
       {action === "SignUp" ? (
         <div></div>
       ) : (
-        <div className="forgot-password">
-          Forgot Password <span onClick={Forgot}>Click Here!</span>
+        <div className="Loginforgot-password">
+          Forgot Password <Link to="/forgot-password">Click Here!</Link>
         </div>
       )}
-      <div className="submit-container">
-        <div className={action === "LogIn" ? "submit gray" : "submit"} onClick={() => { setAction("SignUp") }}>
+      <div className="Loginsubmit-container">
+        <div className={action === "LogIn" ? "Loginsubmit gray" : "Loginsubmit"} onClick={() => { setAction("SignUp") }}>
           SignUp
         </div>
-        <div className={action === "SignUp" ? "submit gray" : "submit"} onClick={() => { setAction("LogIn") }}>
-          LogIn
-        </div>
+          <div className={action === "SignUp" ? "Loginsubmit gray" : "Loginsubmit"} onClick={() => { setAction("LogIn") }}>
+            Login
+          </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };

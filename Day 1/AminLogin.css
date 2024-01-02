@@ -1,5 +1,5 @@
 
-.Logincontainer{
+.Admincontainer{
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -10,7 +10,7 @@
     padding-bottom: 30px;
 }
 
-.Loginheader{
+.Adminheader{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,24 +19,24 @@
     margin-top: 30px;
 
 }
-.Logintext{
+.Admintext{
     color: rgb(14, 209, 69);
     font-size: 48px;
     font-weight: 700;
 }
-.Loginunderline{
+.Adminunderline{
     width: 61px;
     height: 6px;
     background: rgb(14, 209, 69);
     border-radius: 9px;
 }
-.Logininputs{
+.Admininputs{
     margin-top: 55px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
-.Logininput{
+.Admininput{
     display: flex;
     align-items: center;
     margin: auto;
@@ -45,10 +45,10 @@
     background: #eaeaea;
     border-radius: 6px;
 }
-.Logininput img{
+.Admininput img{
     margin: 0px 30px;
 }
-.Logininput input{
+.Admininput input{
     height: 50px;
     width: 400px;
     background: transparent;
@@ -68,19 +68,20 @@
     color: rgb(14, 209, 69);
     cursor: pointer;
 }
-.Loginsubmit-container{
+.Adminsubmit-container{
     display: flex;
     gap: 30px;
     margin: 60px auto;
 }
-.Loginforgot-password{
+.Adminforgot-password{
     margin-left: 125px;
 }
-.Loginforgot-password a{
+.AdminLogin{
+    color:white;
+    text-decoration: none;
     
-    color: rgb(14, 209, 69);
 }
-.Loginsubmit{
+.Adminsubmit{
     display: flex;
     justify-content: center;
     align-items: center;
